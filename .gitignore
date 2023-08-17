@@ -1,5 +1,7 @@
 .idea
+doc
 
 test
-
-doc
+a_trade_calendar.egg-info
+build
+dist
