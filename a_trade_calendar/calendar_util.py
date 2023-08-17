@@ -12,7 +12,6 @@ _current_directory = os.path.dirname(__file__)
 # print("当前文件的目录：", _current_directory)
 
 _a_trade_cal_df = pd.read_csv(f'{_current_directory}/a_trade_calendar.csv')
-print(len(_a_trade_cal_df))
 print(f"a-trade-calendar latest dt: {_a_trade_cal_df.iloc[-1]['dt']}, cnt: {len(_a_trade_cal_df)}")
 
 
