@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "a_trade_calendar"
-version = "0.0.4"
+version = "0.0.6"
 description = "一款纯粹的交易日历工具包，适用于A股"
 readme = "README.md"
 keywords = ["a股", "日历"]
