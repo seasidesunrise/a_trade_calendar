@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "a_trade_calendar"
-version = "2025.9.1.7"
+version = "2025.9.1.8"
 description = "适用于A股，一款简单、纯粹的交易日历工具包。来自[西海岸量化工作室]。"
 readme = "README.md"
 keywords = ["a股", "日历"]
