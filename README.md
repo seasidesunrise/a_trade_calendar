@@ -37,7 +37,7 @@ import a_trade_calendar
 dt = '2023-09-01'
 is_trade_date = a_trade_calendar.is_trade_date(dt)
 
-print(is_trade_date)ø
+print(is_trade_date)
 ```
 
 ## 3、获取A股前面n个交易日对应的日期
