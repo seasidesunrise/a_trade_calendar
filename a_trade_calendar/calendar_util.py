@@ -71,7 +71,7 @@ def get_next_trade_date(dtime, cnt=1):
 
 
 def get_trade_days_interval(from_dt, to_dt) -> int:
-    """ 获取两个日期相隔的交易日天数 """
+    """ 获取两个日期相隔的交易日天数，不包含from_dt 和 to_dt """
     days_df = _a_trade_cal_df[(_a_trade_cal_df['dt'] > from_dt) & (_a_trade_cal_df['dt'] < to_dt)]
 
     cnt = len(days_df)
@@ -79,3 +79,11 @@ def get_trade_days_interval(from_dt, to_dt) -> int:
         return cnt
     else:
         return 0
+
+
+def get_trade_count(from_dt, to_dt):
+    """
+    包含指定的 from_dt 和 to_dt
+    """
+    days_df = _a_trade_cal_df[(_a_trade_cal_df['dt'] >= from_dt) & (_a_trade_cal_df['dt'] <= to_dt)]
+    return len(days_df)
