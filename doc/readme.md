@@ -7,7 +7,7 @@
 python3 -m pip install --upgrade build
 
 ## 打包
-python3 -m build
+`python3 -m build`
 
 ## 上传
 twine upload dist/a_trade_calendar-xxxx.whl
