@@ -85,5 +85,11 @@ def get_trade_count(from_dt, to_dt):
     """
     包含指定的 from_dt 和 to_dt
     """
-    days_df = _a_trade_cal_df[(_a_trade_cal_df['dt'] >= from_dt) & (_a_trade_cal_df['dt'] <= to_dt)]
-    return len(days_df)
+    tmpdf = _a_trade_cal_df[(_a_trade_cal_df['dt'] >= from_dt) & (_a_trade_cal_df['dt'] <= to_dt)]
+    return len(tmpdf)
+
+
+def get_trade_days(from_dt, to_dt):
+    """ 获取指定日期范围内的所有交易日，包含指定的 from_dt 和 to_dt """
+    tmpdf = _a_trade_cal_df[(_a_trade_cal_df['dt'] >= from_dt) & (_a_trade_cal_df['dt'] <= to_dt)]
+    return tmpdf['dt'].values

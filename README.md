@@ -86,3 +86,16 @@ trade_days = a_trade_calendar.get_trade_count(from_dt, to_dt)
 
 print(trade_days)
 ```
+
+## 7、获取A股两个日期相隔的交易日列表，包括 from_dt 和 to_dt
+
+```
+import a_trade_calendar
+
+from_dt = '2023-08-21'
+to_dt = '2023-09-01'
+
+trade_days = a_trade_calendar.get_trade_days(from_dt, to_dt)
+
+print(trade_days)
+```
