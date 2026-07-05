@@ -1,12 +1,14 @@
+[tool.setuptools.package-data]
+a_trade_calendar = ["a_trade_calendar.csv"]
+
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
 name = "a_trade_calendar"
-version = "2028.04.11.01"
+version = "2028.04.12.02"
 description = "适用于A股，一款简单、纯粹的交易日历工具包。来自[西海岸量化工作室]。"
 readme = "README.md"
 keywords = ["a股", "日历"]
 license = { text = "BSD 2-Clause License" }
-

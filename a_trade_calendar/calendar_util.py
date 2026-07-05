@@ -5,19 +5,20 @@
 """
 import os
 import time
-
+from a_trade_calendar.updater import get_calendar_path
 import pandas as pd
 
 _current_directory = os.path.dirname(__file__)
 # print("当前文件的目录：", _current_directory)
 
-_a_trade_cal_df = pd.read_csv(f'{_current_directory}/a_trade_calendar.csv')
+# _a_trade_cal_df = pd.read_csv(f'{_current_directory}/a_trade_calendar.csv')
+_a_trade_cal_df = pd.read_csv(get_calendar_path())
 end_dt = _a_trade_cal_df.iloc[-1]['dt']
 
 curr_date = time.strftime("%Y-%m-%d", time.localtime())
 days_df = _a_trade_cal_df[(_a_trade_cal_df['dt'] > curr_date) & (_a_trade_cal_df['dt'] < end_dt)]
 date_interval = len(days_df)
-if date_interval < 100:
+if date_interval < 30:
     print(f"a-trade-calendar dt cnt: {len(_a_trade_cal_df)},  日期区间：{_a_trade_cal_df.iloc[0]['dt']} to {end_dt}。⚠️ 您的应用版本已经老旧。请尽快尝试更新(pip install --upgrade a-trade-calendar)以获得最新A股交易日历！🔝")
 
 
